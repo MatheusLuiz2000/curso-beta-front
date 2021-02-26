@@ -26,6 +26,7 @@
     "react-step-wizard": "^5.3.5",
     "react-toastify": "^5.4.0",
     "reactotron-react-js": "^3.3.6",
+    "customize-cra": "^0.8.0",
     "reactotron-redux": "^3.1.2",
     "reactotron-redux-saga": "^4.2.2",
     "styled-components": "^4.4.1",
@@ -52,7 +53,6 @@
   },
   "devDependencies": {
     "babel-plugin-root-import": "^6.4.1",
-    "customize-cra": "^0.8.0",
     "e": "^0.0.4",
     "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.0.1",
