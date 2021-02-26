@@ -46,7 +46,6 @@ export const InputContainer = styled.div`
     border-image: initial;
     border-radius: 4px;
     padding: 15px;
-    margin-bottom: 6px;
     box-shadow: 0 14px 28px rgba(255, 255, 255, 0.25),
       0 10px 10px rgba(160, 160, 160, 0.22);
     outline: 0;

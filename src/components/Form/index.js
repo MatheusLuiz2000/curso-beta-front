@@ -7,7 +7,7 @@ export const Input = props => {
   const { nome, type, id, label, error, control, defaultValue } = props;
 
   return (
-    <InputContainer className={error ? 'error' : ''}>
+    <InputContainer className={error ? 'error form-group' : 'form-group'}>
       <label htmlFor={nome}>{label}</label>
       <Controller
         name={nome}
@@ -32,6 +32,25 @@ export const Select = props => {
     defaultValue,
   } = props;
 
+  const colourStyles = {
+    control: styles => ({ ...styles, backgroundColor: 'white', height: 55, minHeight: 55 }),
+    valueContainer: (provided, state) => ({
+      ...provided,
+      height: '55px',
+    }),
+    option: (styles, { data, isDisabled, isFocused, isSelected }) => {
+      return {
+        ...styles,
+        paddingTop: '0px',
+        backgroundColor: '#ffff',
+        color: 'rgb(144 144 144)',
+        fontSize: '14px',
+        controlHeight: 25,
+        cursor: isDisabled ? 'not-allowed' : 'default',
+      };
+    },
+  };
+
   return (
     <InputContainer className={error ? 'error form-group' : 'form-group'}>
       <label htmlFor={nome}>{label}</label>
@@ -42,6 +61,7 @@ export const Select = props => {
         as={
           <ReactSelect
             className="select-class"
+            styles={colourStyles}
             placeholder={placeholder}
             defaultValue={defaultValue}
             options={options.map(item => {

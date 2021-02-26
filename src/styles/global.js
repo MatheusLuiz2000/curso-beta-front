@@ -96,26 +96,23 @@ export default createGlobalStyle`
 
   
   .select-class {
-    .css-g1d714-ValueContainer {
-      height: 52px !important;
+      :hover {
+        border-bottom: 2px solid red;
+        border-radius: 3px;
+      }
+
+      .css-5duvv3-control {
+      border-color: rgb(220,220,220) !important;
     }
     .css-1uccc91-singleValue {
-      top: 60%;
-      font-size: 14px;
-      font-weight: 500;
-      color: rgb(144 144 144);
-    }
-    :hover {
-      border-bottom: 2px solid red;
-      border-radius: 3px;
+      color: rgb(79,79,79);
     }
 
-    .css-2613qy-menu {
-      color: red;
-    }
-    .css-yk16xz-control {
-      height: 52px !important;
-      border-color:  rgb(220, 220, 220) !important;
+    .css-1vp9nu5-control {
+        border-color: rgb(220,220,220) !important;
+        box-shadow: none !important;
     }
   }
+
+
 `;

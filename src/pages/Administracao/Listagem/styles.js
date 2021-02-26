@@ -16,11 +16,14 @@ export const ContainerNovoCurso = styled.div`
   justify-content: flex-end;
   width: 100%;
   margin-right: 40px;
+  margin-bottom: 50px;
 `;
 
 export const ContainerVideos = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
   margin: 30px 0px;
 `;
 
