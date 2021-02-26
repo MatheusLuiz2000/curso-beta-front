@@ -7,14 +7,18 @@ export default function RouteWrapper({
   isPrivate,
   ...rest
 }) {
-  const signed = false;
+  let dados = localStorage.getItem('adm');
 
-  if (!signed && isPrivate) {
-    return <Redirect to="/" />;
+  if (!dados && isPrivate) {
+    return <Redirect to="/login" />;
   }
 
-  if (signed && !isPrivate) {
-    return <Redirect to="/" />;
+  if (dados) {
+    dados = JSON.parse(dados);
+
+    if ((!dados.email || !dados.token) && isPrivate) {
+      return <Redirect to="/login" />;
+    }
   }
 
   return <Route {...rest} component={Component} />;
