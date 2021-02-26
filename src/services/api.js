@@ -6,7 +6,8 @@ export async function buscarCategorias() {
   try {
     const { status, data } = await axios({
       method: 'get',
-      url: `http://localhost:4020/categorias`,
+      url: `${process.env.REACT_APP_API_URL ||
+        'http://localhost:4020/'}categorias`,
       headers: {
         Authorization: `Bearer ${dadosAdm.token}`,
       },
@@ -27,7 +28,7 @@ export async function buscarCursos(filtros) {
   try {
     const { status, data } = await axios({
       method: 'get',
-      url: `http://localhost:4020/cursos`,
+      url: `${process.env.REACT_APP_API_URL || 'http://localhost:4020/'}cursos`,
       params: filtros,
       headers: {
         Authorization: `Bearer ${dadosAdm.token}`,
@@ -49,7 +50,7 @@ export async function adicionarCurso(body) {
   try {
     const { status, data } = await axios({
       method: 'post',
-      url: `http://localhost:4020/cursos`,
+      url: `${process.env.REACT_APP_API_URL || 'http://localhost:4020/'}cursos`,
       headers: {
         Authorization: `Bearer ${dadosAdm.token}`,
       },
@@ -71,7 +72,8 @@ export async function buscarCurso(id) {
   try {
     const { status, data } = await axios({
       method: 'get',
-      url: `http://localhost:4020/curso/${id}`,
+      url: `${process.env.REACT_APP_API_URL ||
+        'http://localhost:4020/'}curso/${id}`,
       headers: {
         Authorization: `Bearer ${dadosAdm.token}`,
       },
@@ -87,7 +89,9 @@ export async function alterarCurso(body) {
   try {
     const { status, data } = await axios({
       method: 'patch',
-      url: `http://localhost:4020/curso/${body.id}`,
+      url: `${process.env.REACT_APP_API_URL || 'http://localhost:4020/'}curso/${
+        body.id
+      }`,
       headers: {
         Authorization: `Bearer ${dadosAdm.token}`,
       },
@@ -109,7 +113,8 @@ export async function deletarCurso(id) {
   try {
     const { status, data } = await axios({
       method: 'delete',
-      url: `http://localhost:4020/curso/${id}`,
+      url: `${process.env.REACT_APP_API_URL ||
+        'http://localhost:4020/'}curso/${id}`,
       headers: {
         Authorization: `Bearer ${dadosAdm.token}`,
       },

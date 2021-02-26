@@ -4,7 +4,7 @@ export default async function logar(email, senha) {
   try {
     const { status, data } = await axios({
       method: 'post',
-      url: `http://localhost:4020/logar`,
+      url: `${process.env.REACT_APP_API_URL || 'http://localhost:4020/'}logar`,
       data: {
         email,
         senha,
