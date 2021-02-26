@@ -64,7 +64,6 @@
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^2.2.0",
     "o": "^2.1.1",
-    "prettier": "^1.18.2",
-    "react-app-rewired": "^2.1.4"
+    "prettier": "^1.18.2"
   }
 }
