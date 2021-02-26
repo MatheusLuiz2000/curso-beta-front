@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 export default async function logar(email, senha) {
+  //force commit
   try {
     const { status, data } = await axios({
       method: 'post',
