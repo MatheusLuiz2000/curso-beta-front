@@ -10,14 +10,14 @@ export default function RouteWrapper({
   let dados = localStorage.getItem('adm');
 
   if (!dados && isPrivate) {
-    return <Redirect to="/login" />;
+    return <Redirect to="/" />;
   }
 
   if (dados) {
     dados = JSON.parse(dados);
 
     if ((!dados.email || !dados.token) && isPrivate) {
-      return <Redirect to="/login" />;
+      return <Redirect to="/" />;
     }
   }
 
