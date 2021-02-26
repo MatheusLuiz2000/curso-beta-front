@@ -5,8 +5,6 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "axios": "^0.19.0",
-    "babel-plugin-import": "^1.12.2",
-    "customize-cra": "^0.8.0",
     "date-fns": "^2.16.1",
     "immer": "^5.0.0",
     "less-loader": "^5.0.0",
@@ -53,6 +51,7 @@
   },
   "devDependencies": {
     "babel-plugin-root-import": "^6.4.1",
+    "customize-cra": "^0.8.0",
     "e": "^0.0.4",
     "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.0.1",
