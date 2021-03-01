@@ -126,7 +126,7 @@ export default function Criacao() {
               nome="url"
               type="text"
               id="url"
-              label="URL do vídeo"
+              label="URL do vídeo - Exemplo: https://www.youtube.com/embed/gz6XSBYqnqU"
               control={control}
               error={errors.url ? errors.url.message : ''}
             />
