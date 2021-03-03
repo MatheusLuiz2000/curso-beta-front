@@ -83,6 +83,12 @@ export default function Listagem() {
     buscaCursos();
   }
 
+  function lastMinutes(date) {
+    const diff = Math.abs(new Date() - new Date(date));
+
+    return `${Math.floor(diff / 1000 / 60)} minutos atrás`;
+  }
+
   useEffect(() => {
     buscaCursos();
   }, [filtros]);
@@ -135,10 +141,7 @@ export default function Listagem() {
                         <div className="icon-text">
                           <AiOutlineFieldTime />
                           <b>Publicado em:</b>
-                          <p>
-                            {new Date(item.criado_em).getMinutes() + 30} minutos
-                            atrás
-                          </p>
+                          <p>{lastMinutes(item.criado_em)}</p>
                         </div>
                       </div>
                       <Link to={`/curso/${item.id}`}>
