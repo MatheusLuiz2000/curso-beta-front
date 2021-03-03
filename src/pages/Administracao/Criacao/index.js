@@ -126,10 +126,11 @@ export default function Criacao() {
               nome="url"
               type="text"
               id="url"
-              label="URL do vídeo - Exemplo: https://www.youtube.com/embed/gz6XSBYqnqU"
+              label="URL do vídeo"
               control={control}
               error={errors.url ? errors.url.message : ''}
             />
+             <small>Exemplo: https://www.youtube.com/embed/gz6XSBYqnqU</small>
             <ContainerButtonSubmit>
               <Button type="submit">Criar curso</Button>
             </ContainerButtonSubmit>
