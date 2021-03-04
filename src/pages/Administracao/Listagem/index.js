@@ -35,7 +35,6 @@ export default function Listagem() {
   const [totalCursos, setTotalCursos] = useState(0);
 
   async function buscaCursos() {
-    setLoader(true);
     const busca = await buscarCursos(filtros);
 
     if (busca.status !== 200) {
@@ -50,11 +49,8 @@ export default function Listagem() {
     }
 
     setDados(busca.data.rows);
-
-    setTimeout(() => {
-      setLoader(false);
-      return setTotalCursos(busca.data.count);
-    }, 1200);
+    setTotalCursos(busca.data.count);
+    setLoader(false);
   }
 
   async function deletaCurso(id) {
